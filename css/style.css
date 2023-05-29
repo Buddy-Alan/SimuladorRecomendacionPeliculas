@@ -1,0 +1,236 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 0.8%;
+}
+
+a {
+    color: white;
+}
+
+body ul {
+    text-decoration: none;
+    list-style: none
+}
+
+span {
+    font-family: 'Righteous', cursive;
+    color: blue;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+#listaIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#listaIndex li {
+    margin: 2px;
+    text-align: center;
+}
+
+#listaIndex li img {
+    width: 19vw;
+    height: 50vh;
+}
+
+
+#divImgPelicula {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1.3rem;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.imgPrincipalPelicula {
+    width: 40vw;
+    height: 35vh;
+}
+
+#divTrailerPelicula {
+    text-align: center;
+}
+
+
+#listaEndGameActores {
+    display: flex;
+    justify-content: space-around;
+}
+
+#listaEndGameActores li {
+    text-align: center;
+}
+
+#listaEndGameActores li img {
+    width: 14vw;
+    height: 35vh;
+    border-radius: 2rem;
+}
+
+#divTablePelicula {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+#divTablePelicula table {
+    table-layout: fixed;
+    width: 65vw;
+    height: 25vh;
+    border-collapse: collapse;
+    border: 3px solid #2f117a;
+}
+
+#divTablePelicula tr,
+th {
+    border: 3px solid #2f117a;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#actoresPelicula {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+#divTodasPeliculasMarvel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#divTodasPeliculasMarvel ol {
+    text-align: justify;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+#divTodasPeliculasMarvel ol li {
+    margin-left: 5rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.videoIntro,
+.trailerIframePelicula {
+    width: 90vw;
+    height: 100vh;
+}
+
+.backgroundPelicula {
+    padding: 2rem;
+}
+
+.audio {
+    width: 45vw;
+    height: 7vh;
+}
+
+#controlsAudio {
+    float: left;
+    position: fixed;
+    bottom: 1px;
+    left: 1px;
+    z-index: 9999;
+}
+
+.sticky {
+    position: sticky !important;
+}
+
+
+#form {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.buttonSubmit {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttonSubmit:hover {
+    background-color: #45a049;
+}
+
+#checkFormPeliculas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.divContainerCheck {
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr;
+}
+
+.divCheck {
+    display: flex;
+    padding: 5px;
+}
+
+#divFormGeneroFav {
+    display: flex;
+}
+
+#footer {
+    margin-top: auto;
+}

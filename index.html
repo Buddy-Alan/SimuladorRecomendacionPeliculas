@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Peliculas Marvel</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body id="bodyIndex">
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="index.html">Inicio </a></li>
+                <li> <a href="pelicula.html">EndGame </a></li>
+                <li> <a href="cuestionario.html">Cuestionario </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video class="videoIntro" autoplay controls title="Intro de Marvel">
+            <source src="./Videos/IntroMarvel.mp4">
+        </video>
+        <h1>Top 9 Peliculas de Marvel</h1>
+        <ul id="listaIndex">
+            <li>
+                <a href="./pelicula.html">
+                    <img src="./Imagenes/Fotos de Index/endgame.jpg" alt="Avengers Endgame">
+                    <h3>Avengers Endgame</h3>
+                </a>
+            </li>
+            <li>
+                <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Black_Panther_(pel%C3%ADcula)"
+                    target="_blank"><img src="./Imagenes/Fotos de Index/blackPanther.png" title="Black Panther"
+                        alt="Black Panther">
+                    <h3>Black Panther</h3>
+                </a>
+            </li>
+            <li>
+                <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Guardianes_de_la_Galaxia?so=search"
+                    target="_blank"><img src="./Imagenes/Fotos de Index/guardianesDeLaGalaxia.png" target="_blank"
+                        title="Guardianes  of the  Galaxy" alt="Guardians  of the  Galaxy">
+                    <h3>Guardians of the Galaxy</h3>
+                </a>
+            </li>
+            <li>
+                <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Avengers:_Infinity_War" target="_blank"><img
+                        src="./Imagenes/Fotos de Index/infinityWar.png" target="_blank" title="Avengers Infiniti War"
+                        alt="Avengers Infiniti War">
+                    <h3>Avengers Infiniti War</h3>
+                </a>
+            </li>
+            <li>
+                <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Iron_Man_(pel%C3%ADcula)" target="_blank">
+                    <img src="./Imagenes/Fotos de Index/ironMan.png" target="_blank" title="Iron Man" alt="Iron Man">
+                    <h3>Iron Man</h3>
+                </a>
+            </li>
+            <li>
+                <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Captain_America:_The_Winter_Soldier"
+                    target="_blank">
+                    <img src="./Imagenes/Fotos de Index/captainAmericaTheWinterSoldier.png"
+                        title="Captain America: The Winter Soldie" alt="Captain America: The Winter Soldier">
+                    <h3>Captain America: The Winter Soldier</h3>
+                </a>
+            </li>
+            <li>
+                <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Thor:_Ragnarok" target="_blank">
+                    <img src="./Imagenes/Fotos de Index/thorRagnarok.png" title="Thor Ragnarok" alt="Thor Ragnarok">
+                    <h3>Thor Ragnarok</h3>
+                </a>
+
+            </li>
+            <li>
+                <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Captain_America:_Civil_War?so=search"
+                    target="_blank">
+                    <img src="./Imagenes/Fotos de Index/captainAmericaCivilWar.png" alt="Captain America: Civil War"
+                        title="Captain America: Civil War">
+                    <h3>Captain America: Civil War</h3>
+                </a>
+
+            </li>
+            <li>
+                <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Spider-Man:_No_Way_Home?so=search"
+                    target="_blank">
+
+                    <img src="./Imagenes/Fotos de Index/siperManNoWayHome.png" alt="Spider-Man: No Way Home"
+                        title="Spider-Man: No Way Home">
+                    <h3>Spider-Man: No Way Home</h3>
+                </a>
+
+            </li>
+        </ul>
+        <div id="divTrailerPelicula">
+            <iframe class="trailerIframePelicula" src="https://www.youtube.com/embed/25GG9LAUHsA"
+                title="Marvel Studios celebra a las películas" frameborder="0"
+                allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div class="audio">
+        </div>
+    </main>
+    <footer id="footer">
+        <p>Alumno: Llanes Alan Jesus</p>
+        <p>Comision 3</p>
+        <p>DNI: 39336928</p>
+    </footer>
+    <script>
+        const nuevoDivAudio = document.querySelector(".audio")
+        actualizarAudio = () => {
+            nuevoDivAudio.innerHTML = `
+        <p>Soundtrack Alan Silvestri - The Avengers <a href="https://www.youtube.com/watch?v=GPYSQpcG1j8&ab_channel=AlanSilvestri-Topic" target="_blank"> Ir al sitio</a></p>
+        <div id="controlsAudio" >
+            <audio  src="./Audio/The Avengers.mp3" autoplay controls ></audio>
+        </div>
+            `
+        }
+        setTimeout(() => { actualizarAudio() }, 40000)
+
+        window.addEventListener('scroll', () => {
+            const audio = document.querySelector("#controlsAudio")
+            const footerContainer = document.querySelector('#footer')
+            const footerPosicion = footerContainer.getBoundingClientRect().top
+            if (footerPosicion <= window.innerHeight) {
+                audio.classList.add('sticky');
+            } else {
+                audio.classList.remove('sticky');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
