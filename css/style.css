@@ -67,8 +67,10 @@ h1 {
 #divImgPelicula {
     font-size: 1.2rem;
     text-align: justify;
-    display: flex;
-    flex-wrap: nowrap;
+}
+
+.nuevoContenedor {
+    float: left;
 }
 
 .imgPrincipalPelicula {
@@ -151,6 +153,10 @@ th {
 .trailerIframePelicula {
     width: 90vw;
     height: 100vh;
+}
+
+.sourceVideo {
+    object-fit: cover;
 }
 
 .backgroundPelicula {
