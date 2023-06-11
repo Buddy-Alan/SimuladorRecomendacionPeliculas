@@ -38,7 +38,7 @@ nav ul {
     flex-wrap: nowrap;
     justify-content: space-around;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: calc(10px + 0.7vw)
 }
 
 h1 {
@@ -46,26 +46,27 @@ h1 {
 }
 
 #listaIndex {
-    float: left;
     display: flex;
     flex-wrap: wrap;
-    vertical-align: middle;
+    justify-content: center
 }
 
 #listaIndex li {
-    margin: 1rem;
     text-align: center;
+    font-size: calc(10px + 0.5vw);
+    margin: 1rem;
 }
 
 #listaIndex li img {
-    width: 100%;
+    max-width: 100%;
+    min-width: 50%;
     height: 50vh;
     object-fit: cover;
 }
 
 
 #divImgPelicula {
-    font-size: 1.2rem;
+    font-size: calc(10px + 0.7vw);
     text-align: justify;
 }
 
@@ -74,7 +75,7 @@ h1 {
 }
 
 .imgPrincipalPelicula {
-    height: 25vh;
+    height: 20vw;
     float: left;
     width: 100%;
     object-fit: cover;
@@ -104,7 +105,6 @@ h1 {
 }
 
 #divTablePelicula {
-
     display: flex;
     justify-content: space-around;
 }
@@ -112,7 +112,7 @@ h1 {
 #divTablePelicula table {
     table-layout: fixed;
     width: 65vw;
-    height: 25vh;
+    height: 40vh;
     border-collapse: collapse;
     border: 3px solid #2f117a;
 }
@@ -122,7 +122,7 @@ th {
     border: 3px solid #2f117a;
     border-collapse: collapse;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: calc(10px + 0.7vw);
 }
 
 #actoresPelicula {
@@ -146,13 +146,14 @@ th {
 #divTodasPeliculasMarvel ol li {
     margin-left: 5rem;
     margin-bottom: 1.2rem;
-    font-size: 1.1rem;
+    font-size: calc(10px + 00.65vw);
 }
 
 .videoIntro,
 .trailerIframePelicula {
     width: 90vw;
-    height: 100vh;
+    height: 50vw;
+    margin-left: 2rem;
 }
 
 .sourceVideo {
@@ -164,8 +165,9 @@ th {
 }
 
 .audio {
-    width: 45vw;
+    width: 90vw;
     height: 7vh;
+    font-size: calc(9px + 0.6vw);
 }
 
 #controlsAudio {
@@ -235,6 +237,8 @@ input[type="checkbox"] {
 
 .divCheck {
     display: flex;
+    align-items: center;
+    justify-content: start;
     padding: 5px;
 }
 
@@ -244,4 +248,247 @@ input[type="checkbox"] {
 
 #footer {
     margin-top: auto;
+}
+
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1350px) {
+
+    /* For tablets: */
+    .col-m-1 {
+        width: 8.33%;
+    }
+
+    .col-m-2 {
+        width: 16.66%;
+    }
+
+    .col-m-3 {
+        width: 25%;
+    }
+
+    .col-m-4 {
+        width: 33.33%;
+    }
+
+    .col-m-5 {
+        width: 41.66%;
+    }
+
+    .col-m-6 {
+        width: 50%;
+    }
+
+    .col-m-7 {
+        width: 58.33%;
+    }
+
+    .col-m-8 {
+        width: 66.66%;
+    }
+
+    .col-m-9 {
+        width: 75%;
+    }
+
+    .col-m-10 {
+        width: 83.33%;
+    }
+
+    .col-m-11 {
+        width: 91.66%;
+    }
+
+    .col-m-12 {
+        width: 100%;
+    }
+
+    body {
+        margin: 1.9rem 1rem 1rem 1rem;
+    }
+
+    .videoIntro,
+    .trailerIframePelicula {
+        width: 90vw;
+        height: 40vw;
+    }
+
+    #listaIndex {
+        justify-content: start;
+    }
+
+    #divTablePelicula table {
+        width: 75vw;
+    }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 900px) {
+
+    #divTablePelicula table {
+        width: 85vw;
+    }
+
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+
+    .videoIntro,
+    .trailerIframePelicula {
+        width: 90vw;
+        height: 60vw;
+    }
+
+    #divTodasPeliculasMarvel ol {
+        width: 100vw;
+    }
+
+
+    .imgPrincipalPelicula {
+        height: 25vw;
+    }
+
+    #divTodasPeliculasMarvel ol li {
+        margin-left: 1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .audio p {
+        width: 100%;
+    }
+
+    .videoIntro,
+    .trailerIframePelicula {
+        margin-left: 1rem;
+    }
+
+    body {
+        margin: 1.8rem 0.7rem 0.7rem 0.7rem;
+    }
+
+    #form {
+        margin-left: 10%;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 80%;
+    }
+
+    .divContainerCheck {
+        grid-template-columns: 0.5fr 0.5fr;
+    }
+
+
 }
